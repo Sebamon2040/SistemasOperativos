@@ -38,8 +38,8 @@ gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -Wall -Werror -pedantic -
 5: mercedes libera 3 estacionamientos desde 2
 5: chevrolet reserva 6 estacionamiento desde 0
 5: suzuki reserva 1 estacionamiento desde 6
-6: suzuki libera 1 estacionamientos desde 6
 6: chevrolet libera 6 estacionamientos desde 0
+6: suzuki libera 1 estacionamientos desde 6
 --- Test: un test mas completo ----
 1: chevrolet solicita 6 estacionamientos
 1: chevrolet reserva 6 estacionamiento desde 0
