@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 #define SIZE 100000000
-#define THRESHOLD 1000000
+#define THRESHOLD 1000
 
 void quicksort(int a[], int i, int j, int n);
 
@@ -72,8 +72,6 @@ void quicksort(int a[], int i, int j, int n){
     }
 
 }
-
-
 int main() {
     srand(time(NULL));
 
