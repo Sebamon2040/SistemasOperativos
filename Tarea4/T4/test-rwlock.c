@@ -52,6 +52,10 @@ static void esperar(int paso) {
 // ==================================================
 // 
 
+static char *nStrdup(char *s) {
+  return strcpy(nMalloc(strlen(s)+1), s);
+}
+
 static int verbose= 1;
 static pthread_mutex_t m= PTHREAD_MUTEX_INITIALIZER;
 static nRWLock *g_rwl, *g_rwl1, *g_rwl2;
@@ -300,7 +304,7 @@ else {
       }
       char nom[20];
       sprintf(nom, "%d", id++);
-      agentes[j]= crearAgente(tipo, strdup(nom), -1, 0);
+      agentes[j]= crearAgente(tipo, nStrdup(nom), -1, 0);
       if (id % MOD == 0)
         printf("%c", tipo==LEC ? 'L' : 'E');
     }
